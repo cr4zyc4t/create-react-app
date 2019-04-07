@@ -1,6 +1,6 @@
 {
   "name": "@cr4zyc4t/babel-preset-react-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "originVersion": "7.0.2",
   "description": "Babel preset used by Create React App",
   "repository": "cr4zyc4t/create-react-app",

@@ -90,6 +90,7 @@ module.exports = function(api, opts, env) {
           // If users import all core-js they're probably not concerned with
           // bundle size. We shouldn't rely on magic to try and shrink it.
           useBuiltIns: 'entry', // @cr4zyc4t: better performance and less output size
+          corejs: 2,
           loose: true,
           // Do not transform modules to CJS
           modules: false,

@@ -103,7 +103,10 @@ module.exports = function(
 
   // Setup the eslint config
   appPackage.eslintConfig = {
-    extends: 'react-app',
+    extends: [
+      'react-app',
+      '@cr4zyc4t/common',
+    ],
   };
 
   // Setup the browsers list

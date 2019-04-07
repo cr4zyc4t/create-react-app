@@ -1,14 +1,15 @@
 {
-  "name": "react-scripts",
-  "version": "2.1.8",
+  "name": "@cr4zyc4t/react-scripts",
+  "version": "1.0.0",
+  "originversion": "2.1.8",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "repository": "cr4zyc4t/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/cr4zyc4t/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -24,6 +25,8 @@
   },
   "types": "./lib/react-app.d.ts",
   "dependencies": {
+    "@cr4zyc4t/babel-preset-react-app": "^1.0.0",
+    "@cr4zyc4t/eslint-config-common": "^1.0.1",
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",
     "babel-core": "7.0.0-bridge.0",
@@ -31,7 +34,6 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.1",
-    "babel-preset-react-app": "^7.0.2",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "1.0.0",

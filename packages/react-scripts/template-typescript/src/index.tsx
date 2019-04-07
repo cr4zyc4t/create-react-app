@@ -1,8 +1,15 @@
-// Don't worry about bundle size, useBuiltIns options of @babel/preset-env will make sure only necessary packages will be imported
-import "@babel/polyfill";
+import "./prepare";
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+
 import "./index.css";
 import App from "./App";
+import store from "./store";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);

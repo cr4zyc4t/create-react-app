@@ -1,6 +1,6 @@
 {
   "name": "@cr4zyc4t/react-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "originversion": "2.1.8",
   "description": "Configuration and scripts for Create React App.",
   "repository": "cr4zyc4t/create-react-app",
@@ -25,7 +25,7 @@
   },
   "types": "./lib/react-app.d.ts",
   "dependencies": {
-    "@cr4zyc4t/babel-preset-react-app": "^1.0.0",
+    "@cr4zyc4t/babel-preset-react-app": "^1.0.2",
     "@cr4zyc4t/eslint-config-common": "^1.0.1",
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",

@@ -86,15 +86,16 @@ module.exports = function(api, opts) {
         {
           // We want Create React App to be IE 9 compatible until React itself
           // no longer works with IE 9
-          targets: {
-            ie: 9,
-          },
+          // targets: {
+          //   ie: 9,
+          // },
           // Users cannot override this behavior because this Babel
           // configuration is highly tuned for ES5 support
-          ignoreBrowserslistConfig: true,
+          // ignoreBrowserslistConfig: true,
           // If users import all core-js they're probably not concerned with
           // bundle size. We shouldn't rely on magic to try and shrink it.
-          useBuiltIns: false,
+          useBuiltIns: 'entry', // @cr4zyc4t: better performance and less output size
+          loose: true,
           // Do not transform modules to CJS
           modules: false,
           // Exclude transforms that make all code slower

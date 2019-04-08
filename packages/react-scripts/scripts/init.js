@@ -75,7 +75,7 @@ function tryGitInit(appPath) {
   }
 }
 
-module.exports = function(
+module.exports = function (
   appPath,
   appName,
   verbose,
@@ -164,12 +164,15 @@ module.exports = function(
 
   if (useYarn) {
     command = 'yarnpkg';
-    args = ['add'];
+    args = ['add', '-E'];
   } else {
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
   args.push('react', 'react-dom', 'redux', 'react-redux', 'redux-thunk');
+  if (useTypeScript) {
+    args.push('@types/redux', '@types/react-redux', 'redux-thunk');
+  }
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
@@ -189,16 +192,16 @@ module.exports = function(
   // Install react and react-dom for backward compatibility with old CRA cli
   // which doesn't install react and react-dom along with react-scripts
   // or template is presetend (via --internal-testing-template)
-  if (!isReactInstalled(appPackage) || template) {
-    console.log(`Installing react and react-dom using ${command}...`);
-    console.log();
+  // if (!isReactInstalled(appPackage) || template) {
+  console.log(`Installing dependences using ${command}...`);
+  console.log();
 
-    const proc = spawn.sync(command, args, { stdio: 'inherit' });
-    if (proc.status !== 0) {
-      console.error(`\`${command} ${args.join(' ')}\` failed`);
-      return;
-    }
+  const proc = spawn.sync(command, args, { stdio: 'inherit' });
+  if (proc.status !== 0) {
+    console.error(`\`${command} ${args.join(' ')}\` failed`);
+    return;
   }
+  // }
 
   if (useTypeScript) {
     verifyTypeScriptSetup();

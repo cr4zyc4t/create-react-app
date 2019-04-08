@@ -167,12 +167,9 @@ module.exports = function (
     args = ['add', '-E'];
   } else {
     command = 'npm';
-    args = ['install', '--save', verbose && '--verbose'].filter(e => e);
+    args = ['install', '--save-exact', verbose && '--verbose'].filter(e => e);
   }
-  args.push('react', 'react-dom', 'redux', 'react-redux', 'redux-thunk');
-  if (useTypeScript) {
-    args.push('@types/redux', '@types/react-redux', 'redux-thunk');
-  }
+  args.push('react', 'react-dom');
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(

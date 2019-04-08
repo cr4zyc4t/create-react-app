@@ -99,7 +99,7 @@ module.exports = function(
     build: 'react-scripts build',
     test: 'react-scripts test',
     eject: 'react-scripts eject',
-    lint: 'eslint "src" --fix',
+    lint: 'eslint "src/*" --fix',
     analyze: "source-map-explorer 'build/static/js/*.js'",
   };
 
